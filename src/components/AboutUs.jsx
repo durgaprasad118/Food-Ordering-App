@@ -1,38 +1,15 @@
-// import User from "./User";
+import User from "./User";
 import React from "react";
-// const About = () => {
-//   return (
-//     <div>
-//       <h1>About</h1>
-//       <h2>Th is is dp from Kolkata</h2>
-//       <UserClass
-//         name={"Achana Naga Durga Prasad frm class based component"}
-//         location={"hyd"}
-//       />
+const About = () => {
+  return (
+    <div className="flex flex-col items-center justify-center items-center max-h-full">
+      <p className="text-md sm:text-2xl font-bold text-slate-700 ">
+        Hello! Welcome to Foodie😍 Thanks for being a valuable customer
+      </p>
+      <ul>
+      </ul>
+    </div>
+  );
+};
 
-//     </div>
-//   );
-// };
-
-// export default About;
-
-class About extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount() {
-  }
-  render() {
-    return (
-      <div>
-        <h1>About</h1>
-        <h2>Th is is dp from Kolkata</h2>{" "}
-        <UserClass
-          name={"Achana Naga Durga Prasad frm class based component"}
-          location={"hyd"}
-        />
-      </div>
-    );
-  }
-}
 export default About;

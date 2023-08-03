@@ -51,7 +51,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="flex flex-col items-center mt-4 ">
-      <div className="flex justify-center relative">
+      <div className="flex md:flex-row flex-col items-center sm:justify-center gap-1 md:gap-0 relative">
         <input
           className="px-4 py-1 border border-black border-solid rounded-md"
           type="text"

@@ -6,9 +6,7 @@ import React from "react";
 
 const ItemList = (props) => {
   const { items } = props;
-  console.log(items);
   const arrays = items?.itemCards;
-  console.log(arrays);
   const dispatch = useDispatch();
   const HandleAddItems = (item) => {
     // dispatch an action

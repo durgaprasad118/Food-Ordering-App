@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import ItemList from "./ItemList";
 import React from "react";
+import { useState, useEffect } from "react";
 
 import { CLoudinary } from "../../utils/constants";
 import { addItems, clearCart, removeItems } from "../../utils/cartSlice";
@@ -11,7 +12,24 @@ const Cart = () => {
   const Handleclick = () => {
     dispatch(clearCart());
   };
-  
+  const [arr, setArr] = useState(cartItems);
+  const [filarr, setFilArr] = useState(cartItems);
+  const [daam,setDaam] = useState(0);
+  useEffect(() => {
+    setArr(cartItems);
+    setFilArr(cartItems);
+  }, cartItems);
+  console.log(arr);
+
+  function INC(d) {
+    console.log("hello");
+    console.log(d);
+    const filtered = filarr.filter((x) => {
+      return x?.card?.info?.id != d;
+    });
+    setFilArr(filtered);
+  }
+
   return cartItems.length === 0 ? (
     <div className="">
       <Nothing />
@@ -26,7 +44,7 @@ const Cart = () => {
         Clear Cart
       </button>
       <div>
-        {cartItems.map((x) => {
+        {filarr.map((x) => {
           return (
             <div
               key={x?.card?.info?.id}
@@ -49,6 +67,15 @@ const Cart = () => {
               <p className="text-sm font-medium">
                 ₹ {x?.card?.info?.price / 100}
               </p>
+              {console.log(x?.card?.info?.id)}
+              <button
+                onClick={() => {
+                  INC(x?.card?.info?.id);
+                }}
+                className="bg-red-600 p-2 m-2 rounded-md text-white"
+              >
+                -
+              </button>
             </div>
           );
         })}
@@ -56,7 +83,7 @@ const Cart = () => {
       <div className="flex flex-col justify-center items-center">
         <h1 className="font-bold">
           Total:
-          {cartItems.reduce((acc, curr) => {
+          {filarr.reduce((acc, curr) => {
             acc += curr?.card?.info?.price / 100;
             return acc;
           }, 0)}

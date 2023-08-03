@@ -1,4 +1,5 @@
 import { CLoudinary } from "../../utils/constants";
+import React from "react";
 
 const Card = (props) => {
 

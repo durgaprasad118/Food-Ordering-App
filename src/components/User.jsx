@@ -1,4 +1,6 @@
 import {useState} from"react"
+import React from "react";
+
 const User = (props) => {
     // can directly pass into the arguments {name} 
     const {name}= props;//destructuring name

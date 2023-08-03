@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import ItemList from "./ItemList";
+import React from "react";
+
 import { CLoudinary } from "../../utils/constants";
 import { addItems, clearCart, removeItems } from "../../utils/cartSlice";
 import Nothing from "./Nothing";

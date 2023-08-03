@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import React from "react";
+
 const Nothing = () => {
   return (
     <div className="  rounded-md  flex justify-center text-center mt-8">

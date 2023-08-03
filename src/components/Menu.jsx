@@ -6,6 +6,8 @@ import useRestaurantMenu from "../../utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
 import Accordian from "./Accordian";
 import { useState } from "react";
+import React from "react";
+
 
 const Menu = () => {
   const resfilterd = menu_list.filter((x) => {

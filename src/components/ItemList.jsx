@@ -2,6 +2,8 @@
 import { CLoudinary } from "../../utils/constants";
 import { useDispatch } from "react-redux";
 import { addItems } from "../../utils/cartSlice";
+import React from "react";
+
 const ItemList = (props) => {
   const { items } = props;
   console.log(items);

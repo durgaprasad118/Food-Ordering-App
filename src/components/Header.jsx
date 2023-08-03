@@ -19,25 +19,23 @@ const Header = () => {
         />
       </div>
       <div className="navitems">
-        <ul className="list-items flex  align-middle text-black-900 font-sans font-normal">
-          <li className="px-2 hidden md:inline">
-            Online status:{onlineStatus ? "🟢" : "🔴"}
-          </li>
-          <li className="px-2">
+        <ul className="list-items flex  align-middle text-black-900 font-sans font-normal ">
+          <li className="px-2 py-1 ">Status:{onlineStatus ? "🟢" : "🔴"}</li>
+          <li className="px-2 hover:bg-slate-600 hover:text-white hover:rounded-md py-1">
             <Link to="/">Home</Link>
           </li>
           {/* <li className="px-2">
             <Link to="/grocery">Grocery</Link>
           </li> */}
-          <li className="px-2">
+          <li className="px-2 hover:bg-slate-600 hover:text-white hover:rounded-md py-1">
             <Link to="/About">About Us</Link>
           </li>
-          <li className="px-2">
+          <li className="px-2 hover:bg-slate-600 hover:text-white hover:rounded-md py-1">
             <Link to="/Contact">Contact us</Link>
           </li>
 
-          <li className="px-2 flex items-center">
-            <Link to="/cart">
+          <Link to="/cart">
+            <li className="px-2 flex items-center py-1  hover:bg-slate-600 hover:text-white hover:rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -48,9 +46,9 @@ const Header = () => {
               >
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg>
-            </Link>
-            <p>({cartItems.length})</p>
-          </li>
+              <p>({cartItems.length})</p>
+            </li>
+          </Link>
           {/* <button
             className="login-btn"
             onClick={() => {
